@@ -15,4 +15,8 @@ export class ListComponent {
     name:'Trunks',
     power:10
   }]
+
+  onDeletedCharacter(index:number): void{
+    console.log({index});
+  }
 }
