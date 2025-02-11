@@ -23,6 +23,9 @@ export class MainPage  {
 ];
 
     onNewCharacter(character: character): void{
+
+        debugger;
+
         this.characters.push(character);
         console.log('Main Page'); 
         console.log(character);
