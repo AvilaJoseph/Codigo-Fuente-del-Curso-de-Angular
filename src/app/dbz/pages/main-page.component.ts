@@ -20,10 +20,14 @@ export class MainPage  {
         name:'Vegeta',
         power: 9200
     }
-];
+    ];
 
     onNewCharacter(character: character): void{
         this.characters.push(character);
     }
+
+    onDeletedCharacter(index:number): void{
+        this.characters.splice(index, 1);
+      }
 
 }
