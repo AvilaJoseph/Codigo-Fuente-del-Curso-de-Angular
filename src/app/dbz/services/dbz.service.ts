@@ -27,13 +27,16 @@ export class DbzService {
   }
   ];
 
-  onNewCharacter(character: character): void{
+    onNewCharacter(character: character): void{
       this.characters.push(character);
   }
 
-  onDeletedCharacter(index:number): void{
+    onDeletedCharacter(index:number): void{
       this.characters.splice(index, 1);
     }
 
+    deletedId(id: string): void{
+      this.characters = this.characters.filter(character => character.id !== id);
+    }
 
 }
