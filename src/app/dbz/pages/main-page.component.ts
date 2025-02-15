@@ -21,7 +21,7 @@ export class MainPage  {
     }
 
     onNewCharacter(character: character): void{
-        this.DbzService.onNewCharacter(character);
+        this.DbzService.addCharacter(character);
     }
 
 }
