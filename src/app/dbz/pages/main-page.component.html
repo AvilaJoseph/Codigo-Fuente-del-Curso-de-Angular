@@ -1,11 +1,28 @@
-<h2>DBZ Personajes</h2>
-<hr>
+<div class="container mt-4 p-4 rounded shadow bg-light">
+    <h2 class="text-center text-primary mb-3">DBZ Personajes</h2>
+    <hr>
 
-<div class="row">
-    <div class="col">
-        <dbz-list [characterList]="Characters" (onDeletedID)="onDeletedCharacter($event)"></dbz-list>
-    </div>
-    <div class="col">
-        <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white text-center">
+                    <h5 class="mb-0">Lista de Personajes</h5>
+                </div>
+                <div class="card-body">
+                    <dbz-list [characterList]="Characters" (onDeletedID)="onDeletedCharacter($event)"></dbz-list>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-success text-white text-center">
+                    <h5 class="mb-0">Agregar Personaje</h5>
+                </div>
+                <div class="card-body">
+                    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
