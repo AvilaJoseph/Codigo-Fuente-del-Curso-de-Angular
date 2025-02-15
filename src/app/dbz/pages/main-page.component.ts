@@ -10,8 +10,18 @@ import { DbzService } from '../services/dbz.service';
 
 export class MainPage  {
 
-    constructor(public DbzService: DbzService) { 
+    constructor(private DbzService: DbzService) {}
 
+    get Characters(): character[]{
+        return this.DbzService.characters;
+    }
+
+    onDeletedCharacter(id: string): void{
+        this.DbzService.deletedId(id);
+    }
+
+    onNewCharacter(character: character): void{
+        this.DbzService.onNewCharacter(character);
     }
 
 }
