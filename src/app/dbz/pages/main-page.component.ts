@@ -8,19 +8,19 @@ import { DbzService } from '../services/dbz.service';
     templateUrl: 'main-page.component.html'
 })
 
-export class MainPage  {
+export class MainPage {
 
-    constructor(private DbzService: DbzService) {}
+    constructor(private DbzService: DbzService) { }
 
-    get Characters(): character[]{
+    get Characters(): character[] {
         return this.DbzService.characters;
     }
 
-    onDeletedCharacter(id: string): void{
+    onDeletedCharacter(id: string): void {
         this.DbzService.deletedId(id);
     }
 
-    onNewCharacter(character: character): void{
+    onNewCharacter(character: character): void {
         this.DbzService.addCharacter(character);
     }
 

@@ -6,37 +6,37 @@ console.log(uuid())
 import { character } from '../interfaces/character.interfaces';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class DbzService {
 
-  public characters: character[] = [{
-      id: uuid(),
-      name:'Krillin',
-      power:1000
-  },
-  {
-      id: uuid(),
-      name:'Goku',
-      power: 9500
-  },
-  {
-      id: uuid(),
-      name:'Vegeta',
-      power: 9200
-  }
-  ];
+    public characters: character[] = [{
+        id: uuid(),
+        name: 'Krillin',
+        power: 1000
+    },
+    {
+        id: uuid(),
+        name: 'Goku',
+        power: 9500
+    },
+    {
+        id: uuid(),
+        name: 'Vegeta',
+        power: 9200
+    }
+    ];
 
-    addCharacter(character: character): void{
-      this.characters.push(character);
-  }
-
-    onDeletedCharacter(index:number): void{
-      this.characters.splice(index, 1);
+    addCharacter(character: character): void {
+        this.characters.push(character);
     }
 
-    deletedId(id: string): void{
-      this.characters = this.characters.filter(character => character.id !== id);
+    onDeletedCharacter(index: number): void {
+        this.characters.splice(index, 1);
+    }
+
+    deletedId(id: string): void {
+        this.characters = this.characters.filter(character => character.id !== id);
     }
 
 }
